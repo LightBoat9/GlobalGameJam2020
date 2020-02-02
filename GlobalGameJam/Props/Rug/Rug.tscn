@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 0.145098, 0.129412, 0.129412, 1 )
+
+[node name="Rug" type="CSGCylinder"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.3225, 0.601941, 17.4235 )
+radius = 12.984
+sides = 64
+material = SubResource( 5 )

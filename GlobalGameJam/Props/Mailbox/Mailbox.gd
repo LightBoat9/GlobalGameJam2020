@@ -29,7 +29,7 @@ func pointing_ended():
 	
 func pointing_selected():
 	for req in $Requirements.list:
-		if not req in EventHandler.items:
+		if not req in EventHandler.checklist["items"]:
 			return
 			
 	self.broken = false

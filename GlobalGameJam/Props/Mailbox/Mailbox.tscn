@@ -70,7 +70,7 @@ shape = SubResource( 3 )
 
 [node name="Requirements" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.16662, 0 )
-list = PoolStringArray( "hammer", "nails" )
+list = PoolStringArray( "drill", "screws" )
 
 [node name="Area" type="Area" parent="."]
 

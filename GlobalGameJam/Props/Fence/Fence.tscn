@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.239216, 0.203922, 0.164706, 1 )
+
+[node name="Fence" type="Spatial"]
+
+[node name="CSGBox" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+width = 0.3
+depth = 0.1
+material = SubResource( 1 )
+
+[node name="CSGBox6" type="CSGBox" parent="."]
+transform = Transform( -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0, 1, 0, 1, 0.1 )
+width = 0.3
+depth = 0.1
+material = SubResource( 1 )
+
+[node name="CSGBox4" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 1, 0 )
+width = 0.3
+depth = 0.1
+material = SubResource( 1 )
+
+[node name="CSGBox5" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 1, 0 )
+width = 0.3
+depth = 0.1
+material = SubResource( 1 )
+
+[node name="CSGBox2" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 1, 0 )
+width = 0.3
+depth = 0.1
+material = SubResource( 1 )
+
+[node name="CSGBox3" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 1, 0 )
+width = 0.3
+depth = 0.1
+material = SubResource( 1 )

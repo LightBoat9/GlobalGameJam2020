@@ -1,0 +1,32 @@
+{
+    "content": [
+      { 
+        "speaker": "maz", 
+        "text": "Did you fix this mailbox?"
+      },
+      { 
+        "speaker": "gump", 
+        "text": "Yeah. I just moved in."
+      },
+      { 
+        "speaker": "maz", 
+        "text": "Ah I see. This mailbox has been broken for years."
+      },
+      { 
+        "speaker": "maz", 
+        "text": "This package keeps getting sent to this address."
+      },
+      { 
+        "speaker": "gump", 
+        "text": "It's a wrench."
+      },
+      { 
+        "speaker": "maz", 
+        "text": "Huh...weird. I'm just glad I don't have to bring it anymore...anyway see you around."
+      },
+      { 
+        "speaker": "gump", 
+        "text": "Bye."
+      }
+    ]
+  }

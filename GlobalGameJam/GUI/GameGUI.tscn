@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://GUI/theme.tres" type="Theme" id=1]
 [ext_resource path="res://GUI/Textbox/Textbox.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GUI/FadeEffect.gd" type="Script" id=3]
-[ext_resource path="res://Items/Hammer/Hammer.png" type="Texture" id=4]
 [ext_resource path="res://GUI/ItemBox/Point.png" type="Texture" id=5]
 [ext_resource path="res://GUI/font_large.tres" type="DynamicFont" id=6]
 
@@ -43,7 +42,6 @@ margin_top = 8.0
 margin_right = 72.0
 margin_bottom = 72.0
 rect_min_size = Vector2( 64, 64 )
-texture = ExtResource( 4 )
 expand = true
 stretch_mode = 6
 

@@ -1,9 +1,13 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Props/House/Door/Door.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Props/GrassAreas/HouseGrass.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Props/Bed/Bed.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Props/Sink/Sink.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Props/Rug/Rug.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Props/Chair/Chair.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Props/Bath/Bath.tscn" type="PackedScene" id=8]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 35, 1, 35 )
@@ -16,9 +20,6 @@ extents = Vector3( 42.243, 27.4998, 0.463097 )
 
 [sub_resource type="SpatialMaterial" id=4]
 albedo_color = Color( 0.054902, 0.0509804, 0.0509804, 1 )
-
-[sub_resource type="SpatialMaterial" id=5]
-albedo_color = Color( 0.145098, 0.129412, 0.129412, 1 )
 
 [node name="HouseInside" type="Spatial"]
 
@@ -61,6 +62,18 @@ width = 70.0
 height = 39.9903
 material = SubResource( 4 )
 
+[node name="CSGBox5" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -57.0752, 0, 19.1858 )
+width = 70.0
+height = 39.9903
+material = SubResource( 4 )
+
+[node name="CSGBox6" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -49.9633, 17.9223, 19.2883 )
+width = 70.0
+height = 4.04167
+material = SubResource( 4 )
+
 [node name="CSGBox2" type="CSGBox" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, 0 )
 height = 40.0
@@ -73,8 +86,22 @@ height = 40.0
 depth = 70.2701
 material = SubResource( 4 )
 
-[node name="Rug" type="CSGCylinder" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.7745, 0.601941, 17.4235 )
-radius = 12.984
-sides = 64
-material = SubResource( 5 )
+[node name="CSGBox4" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3461, 0, -14.9355 )
+height = 40.0
+depth = 70.2701
+material = SubResource( 4 )
+
+[node name="Rug" parent="." instance=ExtResource( 6 )]
+
+[node name="Sink" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8636, 1.5, 2.564 )
+
+[node name="Chair" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.801212, 0, -0.598381, 0, 1, 0, 0.598381, 0, 0.801212, 28.1207, 0, 18.1391 )
+
+[node name="Chair2" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.307273, 0, 0.951621, 0, 1, 0, -0.951621, 0, 0.307273, -28.2823, 0, 27.2524 )
+
+[node name="Spatial" parent="." instance=ExtResource( 8 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -29.7875, 0.799013, 6.84144 )

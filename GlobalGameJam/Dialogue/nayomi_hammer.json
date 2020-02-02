@@ -1,0 +1,32 @@
+{
+    "content": [
+      { 
+        "speaker": "nayomi", 
+        "text": "Hello again."
+      },
+      { 
+        "speaker": "gump", 
+        "text": "..."
+      },
+      { 
+        "speaker": "nayomi", 
+        "text": "I am guessing from that look on your face that you have seen inside your house."
+      },
+      { 
+        "speaker": "gump", 
+        "text": "Yeah..."
+      },
+      { 
+        "speaker": "nayomi", 
+        "text": "Don't worry about it. Here I have the hammer I said you could borrow."
+      },
+      { 
+        "speaker": "nayomi", 
+        "text": "This will be your first step to fixing your house back to something you can be confortable in."
+      },
+      { 
+        "speaker": "gump", 
+        "text": "Thank You."
+      }
+    ]
+}

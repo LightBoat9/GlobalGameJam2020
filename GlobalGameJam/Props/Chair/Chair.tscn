@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.101961, 0.137255, 0.34902, 1 )
+
+[node name="Chair" type="Spatial"]
+
+[node name="CSGCombiner" type="CSGCombiner" parent="."]
+
+[node name="CSGBox" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+width = 4.0
+height = 4.0
+depth = 4.0
+material = SubResource( 1 )
+
+[node name="CSGBox" type="CSGBox" parent="CSGCombiner/CSGBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55397, 0.4 )
+operation = 2
+width = 3.0
+height = 3.6
+depth = 3.6
+material = SubResource( 1 )
+
+[node name="CSGBox2" type="CSGBox" parent="CSGCombiner/CSGBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.82105, 0.4 )
+operation = 2
+width = 5.94121
+height = 3.6
+depth = 6.29516
+material = SubResource( 1 )

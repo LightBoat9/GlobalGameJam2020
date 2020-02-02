@@ -17,6 +17,9 @@ var prep_finished: bool = false
 const PICTURES: Dictionary = {
 	"gump": preload("res://Player/gump_pic.tres"),
 	"nayomi": preload("res://Characters/Nayomi/nayomi_pic.tres"),
+	"will": preload("res://Characters/Will/Will.tres"),
+	"alex": preload("res://Characters/Alex/Alex.tres"),
+	"maz": preload("res://Characters/Maz/Maz.tres")
 }
 
 func _input(event: InputEvent) -> void:
@@ -49,6 +52,7 @@ func set_speaker_pic(pic: Texture) -> void:
 
 func play_from_json(json: String) -> void:
 	var file = File.new()
+	json = "res://" + json
 	file.open(json, File.READ)
 	var text = file.get_as_text()
 	var dict = {}
