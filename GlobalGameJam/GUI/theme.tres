@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=3 format=2]
+
+[ext_resource path="res://GUI/font_small.tres" type="DynamicFont" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+bg_color = Color( 0.129412, 0.121569, 0.121569, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.239216, 0.239216, 0.239216, 1 )
+
+[resource]
+default_font = ExtResource( 1 )
+PanelContainer/styles/panel = SubResource( 1 )

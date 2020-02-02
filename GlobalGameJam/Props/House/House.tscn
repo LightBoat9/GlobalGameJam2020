@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Props/House/Door/Door.tscn" type="PackedScene" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 17, 7, 7 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.913725, 0.713726, 0.552941, 1 )
+
+[node name="House" type="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.5, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="Boxes" type="CSGCombiner" parent="."]
+
+[node name="CSGBox" type="CSGBox" parent="Boxes"]
+width = 35.0
+height = 15.0
+depth = 15.0
+material = SubResource( 2 )
+
+[node name="CSGBox2" type="CSGBox" parent="Boxes/CSGBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.69883, 7.12335 )
+operation = 2
+width = 4.99836
+height = 7.01292
+material = SubResource( 2 )
+
+[node name="CSGBox5" type="CSGBox" parent="Boxes/CSGBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -2, 7 )
+operation = 2
+width = 5.0
+height = 5.0
+material = SubResource( 2 )
+
+[node name="CSGBox6" type="CSGBox" parent="Boxes/CSGBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -2, 7 )
+operation = 2
+width = 5.0
+height = 5.0
+material = SubResource( 2 )
+
+[node name="Door" parent="Boxes" instance=ExtResource( 1 )]
+next_scene = "res://Scenes/HouseInside.tscn"
+player_pos = Vector3( 0, 2, 30 )
+checklist_req = PoolStringArray( "nayomi_intro" )

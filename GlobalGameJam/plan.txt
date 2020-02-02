@@ -1,0 +1,22 @@
+hammer for bed
+nails for bed
+wrench for sink
+drill for mailbox
+screws for mailbox
+saw for wood
+wood for cabinet
+
+1) get hammer from neighbor
+2) help someone open crate with hammer get nails
+3) fix bed
+
+1) bring dude apple get drill
+2) use drill to help neighbor hang pictures get leftover screws
+3) use screws to repair mailbox
+
+1) bring man flower for wife get saw
+2) use saw to get wood
+3) repair cabinet
+
+1) meet mailman to get package with a wrench
+2) use wrench to repair sink

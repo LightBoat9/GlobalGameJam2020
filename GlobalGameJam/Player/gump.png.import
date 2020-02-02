@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/gump.png-9d7a4c8d640fa4f3bdf83b126ea88d68.s3tc.stex"
-path.etc2="res://.import/gump.png-9d7a4c8d640fa4f3bdf83b126ea88d68.etc2.stex"
+path.s3tc="res://.import/gump.png-8a7796c740d65a95076ab3c98e021774.s3tc.stex"
+path.etc2="res://.import/gump.png-8a7796c740d65a95076ab3c98e021774.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://gump.png"
-dest_files=[ "res://.import/gump.png-9d7a4c8d640fa4f3bdf83b126ea88d68.s3tc.stex", "res://.import/gump.png-9d7a4c8d640fa4f3bdf83b126ea88d68.etc2.stex" ]
+source_file="res://Player/gump.png"
+dest_files=[ "res://.import/gump.png-8a7796c740d65a95076ab3c98e021774.s3tc.stex", "res://.import/gump.png-8a7796c740d65a95076ab3c98e021774.etc2.stex" ]
 
 [params]
 

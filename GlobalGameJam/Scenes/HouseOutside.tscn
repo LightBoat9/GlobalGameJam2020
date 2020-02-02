@@ -1,0 +1,162 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scenes/HouseOutside.gd" type="Script" id=1]
+[ext_resource path="res://Props/GrassAreas/HouseGrass.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Props/SteppingStone/SteppingStone.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Props/GrassAreas/Grass.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Characters/Nayomi/Nayomi.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Props/Mailbox/Mailbox.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Props/House/House.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Props/Bush/Bush.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Props/NayomiHouse/NayomiHouse.tscn" type="PackedScene" id=10]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 200, 31.471, 1 )
+
+[node name="HouseOutside" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 13 )
+
+[node name="House" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.5, -14.8868 )
+
+[node name="GrassMesh" parent="." instance=ExtResource( 2 )]
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 57.985, 78.0882, 33.3633 )
+omni_range = 302.8
+
+[node name="InvisWall" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="InvisWall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18.1653 )
+shape = SubResource( 1 )
+
+[node name="InvisWall2" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -38.2491 )
+
+[node name="CollisionShape" type="CollisionShape" parent="InvisWall2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18.1653 )
+shape = SubResource( 1 )
+
+[node name="Mailbox" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8595, 2.98192, 1.02595 )
+broken = true
+
+[node name="Nayomi" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.81951, 2.68726, 3.04492 )
+
+[node name="Grass" type="Spatial" parent="."]
+
+[node name="Grass" parent="Grass" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.3187, 0.7, 0 )
+
+[node name="Grass2" parent="Grass" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9854, 0.7, 0 )
+
+[node name="Grass3" parent="Grass" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.4253, 0.7, 0 )
+
+[node name="Grass4" parent="Grass" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.41211, 0.7, 3.82518 )
+
+[node name="Grass5" parent="Grass" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.8402, 0.7, -12.5011 )
+
+[node name="Grass6" parent="Grass" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.2942, 0.7, -12.5011 )
+
+[node name="MainHouseProps" type="Spatial" parent="."]
+
+[node name="SteppingStone" parent="MainHouseProps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.34274, 0.01, 6.88535 )
+
+[node name="SteppingStone2" parent="MainHouseProps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.253538, 0.01, 8.04166 )
+
+[node name="SteppingStone3" parent="MainHouseProps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.351545, 0.01, 5.48478 )
+
+[node name="SteppingStone4" parent="MainHouseProps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6774, 0.01, 3.98858 )
+
+[node name="SteppingStone5" parent="MainHouseProps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.333248, 0.01, 2.66084 )
+
+[node name="SteppingStone6" parent="MainHouseProps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75905, 0.01, 0.691178 )
+
+[node name="SteppingStone7" parent="MainHouseProps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15869, 0.01, -1.62292 )
+
+[node name="SteppingStone8" parent="MainHouseProps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.98961, 0.01, -3.24916 )
+
+[node name="SteppingStone9" parent="MainHouseProps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0357512, 0.01, -4.09918 )
+
+[node name="SteppingStone10" parent="MainHouseProps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.60807, 0.01, -5.78114 )
+
+[node name="SteppingStone11" parent="MainHouseProps" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33442, 0.01, -5.78114 )
+
+[node name="Bush" parent="MainHouseProps" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1554, 2.17925, -3.5292 )
+
+[node name="Bush2" parent="MainHouseProps" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0881, 2.17925, -4.42654 )
+
+[node name="Bush3" parent="MainHouseProps" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.00524, 2.17925, -4.69806 )
+
+[node name="Bush4" parent="MainHouseProps" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5572, 2.17925, -3.89045 )
+
+[node name="NayomiHouse" parent="." instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.233, 7.5, -13.9813 )
+
+[node name="NayomiProps" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1554, 2.17925, -3.5292 )
+
+[node name="Bush5" parent="NayomiProps" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -55.3451, 0, -1.16886 )
+
+[node name="Bush6" parent="NayomiProps" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60.4953, 0, 0 )
+
+[node name="SteppingStone22" parent="NayomiProps" instance=ExtResource( 4 )]
+transform = Transform( 0.996388, 0, 0.0849126, 0, 1, 0, -0.0849126, 0, 0.996388, -48.0865, -2.16925, 10.5499 )
+
+[node name="SteppingStone21" parent="NayomiProps" instance=ExtResource( 4 )]
+transform = Transform( 0.996388, 0, 0.0849126, 0, 1, 0, -0.0849126, 0, 0.996388, -45.4014, -2.16925, 11.4816 )
+
+[node name="SteppingStone20" parent="NayomiProps" instance=ExtResource( 4 )]
+transform = Transform( 0.996388, 0, 0.0849126, 0, 1, 0, -0.0849126, 0, 0.996388, -45.5208, -2.16925, 8.9256 )
+
+[node name="SteppingStone19" parent="NayomiProps" instance=ExtResource( 4 )]
+transform = Transform( 0.996388, 0, 0.0849126, 0, 1, 0, -0.0849126, 0, 0.996388, -47.6695, -2.16925, 7.60708 )
+
+[node name="SteppingStone18" parent="NayomiProps" instance=ExtResource( 4 )]
+transform = Transform( 0.996388, 0, 0.0849126, 0, 1, 0, -0.0849126, 0, 0.996388, -45.7789, -2.16925, 6.11341 )
+
+[node name="SteppingStone17" parent="NayomiProps" instance=ExtResource( 4 )]
+transform = Transform( 0.996388, 0, 0.0849126, 0, 1, 0, -0.0849126, 0, 0.996388, -48.0309, -2.16925, 4.32852 )
+
+[node name="SteppingStone16" parent="NayomiProps" instance=ExtResource( 4 )]
+transform = Transform( 0.996388, 0, 0.0849126, 0, 1, 0, -0.0849126, 0, 0.996388, -45.3201, -2.16925, 1.77503 )
+
+[node name="SteppingStone15" parent="NayomiProps" instance=ExtResource( 4 )]
+transform = Transform( 0.996388, 0, 0.0849126, 0, 1, 0, -0.0849126, 0, 0.996388, -48.5952, -2.16925, 0.421992 )
+
+[node name="SteppingStone14" parent="NayomiProps" instance=ExtResource( 4 )]
+transform = Transform( 0.996388, 0, 0.0849126, 0, 1, 0, -0.0849126, 0, 0.996388, -46.7205, -2.16925, -0.590866 )
+
+[node name="SteppingStone13" parent="NayomiProps" instance=ExtResource( 4 )]
+transform = Transform( 0.996388, 0, 0.0849126, 0, 1, 0, -0.0849126, 0, 0.996388, -48.43, -2.16925, -2.13324 )
+
+[node name="SteppingStone12" parent="NayomiProps" instance=ExtResource( 4 )]
+transform = Transform( 0.996388, 0, 0.0849126, 0, 1, 0, -0.0849126, 0, 0.996388, -45.4981, -2.16925, -2.38309 )

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Props/Bush/Bush.png" type="Texture" id=1]
+
+[node name="Bush" type="Sprite3D"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1022, 2.17925, -3.5292 )
+texture = ExtResource( 1 )

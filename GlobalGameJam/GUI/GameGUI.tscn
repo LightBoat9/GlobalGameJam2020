@@ -1,0 +1,91 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://GUI/theme.tres" type="Theme" id=1]
+[ext_resource path="res://GUI/Textbox/Textbox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://GUI/FadeEffect.gd" type="Script" id=3]
+[ext_resource path="res://Items/Hammer/Hammer.png" type="Texture" id=4]
+[ext_resource path="res://GUI/ItemBox/Point.png" type="Texture" id=5]
+[ext_resource path="res://GUI/font_large.tres" type="DynamicFont" id=6]
+
+[node name="GameGUI" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Textbox" parent="Control" groups=[
+"textbox",
+] instance=ExtResource( 2 )]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 80.0
+margin_bottom = 80.0
+custom_constants/separation = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/HBoxContainer"]
+margin_right = 80.0
+margin_bottom = 80.0
+
+[node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer/PanelContainer" groups=[
+"item_texture",
+]]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 72.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="PanelContainer2" type="PanelContainer" parent="Control/HBoxContainer"]
+margin_left = 84.0
+margin_top = 14.0
+margin_right = 159.0
+margin_bottom = 66.0
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HBoxContainer/PanelContainer2"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 67.0
+margin_bottom = 44.0
+
+[node name="Label" type="Label" parent="Control/HBoxContainer/PanelContainer2/HBoxContainer"]
+margin_right = 23.0
+margin_bottom = 36.0
+custom_fonts/font = ExtResource( 6 )
+text = "Q"
+
+[node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer/PanelContainer2/HBoxContainer"]
+margin_left = 27.0
+margin_top = 2.0
+margin_right = 59.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 32, 32 )
+size_flags_vertical = 4
+texture = ExtResource( 5 )
+expand = true
+
+[node name="FadeEffect" type="ColorRect" parent="." groups=[
+"player_fade",
+]]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0705882, 0.0666667, 0.0666667, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="FadeEffect"]

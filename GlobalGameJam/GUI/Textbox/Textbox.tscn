@@ -1,0 +1,105 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://GUI/font_large.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Characters/Nayomi/nayomi_pic.tres" type="Texture" id=2]
+[ext_resource path="res://GUI/Textbox/Textbox.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.0862745, 0.0862745, 0.0862745, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+
+[node name="Textbox" type="Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameContainer" type="PanelContainer" parent="."]
+anchor_top = 0.65
+anchor_right = 0.3
+anchor_bottom = 0.65
+margin_left = 8.0
+margin_top = -64.0
+margin_right = 108.0
+margin_bottom = -8.0
+size_flags_stretch_ratio = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameLabel" type="Label" parent="NameContainer"]
+margin_left = 7.0
+margin_top = 10.0
+margin_right = 400.2
+margin_bottom = 46.0
+custom_fonts/font = ExtResource( 1 )
+text = "Gump"
+align = 1
+valign = 1
+
+[node name="Box" type="PanelContainer" parent="."]
+anchor_top = 0.65
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBox" type="HBoxContainer" parent="Box"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1001.0
+margin_bottom = 195.0
+size_flags_horizontal = 3
+
+[node name="PictureContainer" type="PanelContainer" parent="Box/HBox"]
+margin_right = 198.0
+margin_bottom = 188.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.25
+custom_styles/panel = SubResource( 1 )
+
+[node name="Picture" type="TextureRect" parent="Box/HBox/PictureContainer"]
+material = SubResource( 2 )
+margin_right = 198.0
+margin_bottom = 188.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+
+[node name="TextContainer" type="PanelContainer" parent="Box/HBox"]
+margin_left = 202.0
+margin_right = 994.0
+margin_bottom = 188.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 3 )
+
+[node name="Text" type="Label" parent="Box/HBox/TextContainer"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 784.0
+margin_bottom = 180.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+text = "Test Text auishdfiaushfasud fad fhasdif hsaf iadfasidfh adifh asif asdf asdfa sdf sdf asdf asf asdf sf asdf "
+autowrap = true
+
+[node name="Tween" type="Tween" parent="."]

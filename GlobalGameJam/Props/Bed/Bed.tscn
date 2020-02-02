@@ -1,0 +1,182 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Props/Requirements/Requirements.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Props/Bed/Bed.gd" type="Script" id=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.211765, 0.168627, 0.133333, 1 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.435294, 0.501961, 0.521569, 1 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.568627, 0.0980392, 0.0980392, 1 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 1.19873, 1, 2.20683 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 2.77236, 1.025, 2.70422 )
+
+[node name="Bed" type="Spatial"]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+script = ExtResource( 2 )
+
+[node name="Fixed" type="Spatial" parent="."]
+visible = false
+
+[node name="CSGBox" type="CSGBox" parent="Fixed"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35, 0 )
+height = 0.270261
+depth = 4.5
+material = SubResource( 1 )
+
+[node name="CSGBox2" type="CSGBox" parent="Fixed"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 0.191809, 2 )
+width = 0.187579
+height = 0.500776
+depth = 0.178397
+material = SubResource( 1 )
+
+[node name="CSGBox3" type="CSGBox" parent="Fixed"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0.191809, 2 )
+width = 0.187579
+height = 0.500776
+depth = 0.178397
+material = SubResource( 1 )
+
+[node name="CSGBox4" type="CSGBox" parent="Fixed"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0.191809, -2 )
+width = 0.187579
+height = 0.500776
+depth = 0.178397
+material = SubResource( 1 )
+
+[node name="CSGBox5" type="CSGBox" parent="Fixed"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 0.191809, -2 )
+width = 0.187579
+height = 0.500776
+depth = 0.178397
+material = SubResource( 1 )
+
+[node name="CSGBox7" type="CSGBox" parent="Fixed"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 2.125 )
+height = 1.27396
+depth = 0.25
+material = SubResource( 1 )
+
+[node name="Matress" type="Spatial" parent="Fixed"]
+
+[node name="CSGBox6" type="CSGBox" parent="Fixed/Matress"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.585, -0.175227 )
+height = 0.2
+depth = 4.11122
+
+[node name="Pillow" type="Spatial" parent="Fixed/Matress"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.754437, 1.34448 )
+
+[node name="CSGCylinder" type="CSGCylinder" parent="Fixed/Matress/Pillow"]
+transform = Transform( 1.89962, 0, 0, 0, -0.00344295, -0.273842, 0, 1.60451, -0.0201731, 0, 0, 0 )
+radius = 0.21491
+height = 0.18831
+material = SubResource( 2 )
+
+[node name="CSGTorus" type="CSGTorus" parent="Fixed/Matress/Pillow"]
+transform = Transform( 1, 0, 0, 0, -0.00162861, -0.129535, 0, 2.26883, -0.0285255, 0, 0, 0 )
+inner_radius = 0.555
+outer_radius = 0.344
+sides = 12
+ring_sides = 10
+material = SubResource( 2 )
+
+[node name="CSGBox8" type="CSGBox" parent="Fixed/Matress"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.623056, -0.641153 )
+width = 2.01602
+height = 0.279286
+depth = 3.21081
+material = SubResource( 3 )
+
+[node name="Broken" type="Spatial" parent="."]
+
+[node name="CSGBox" type="CSGBox" parent="Broken"]
+transform = Transform( 0.994456, 0.105133, -0.00197129, -0.1044, 0.989407, 0.10087, 0.0125552, -0.100105, 0.994898, 0, 0.419547, 0 )
+height = 0.270261
+depth = 4.5
+material = SubResource( 1 )
+
+[node name="CSGBox7" type="CSGBox" parent="Broken/CSGBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 2.125 )
+height = 1.27396
+depth = 0.25
+material = SubResource( 1 )
+
+[node name="CSGBox2" type="CSGBox" parent="Broken/CSGBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, -0.158191, 2 )
+width = 0.187579
+height = 0.500776
+depth = 0.178397
+material = SubResource( 1 )
+
+[node name="CSGBox3" type="CSGBox" parent="Broken/CSGBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, -0.158191, 2 )
+width = 0.187579
+height = 0.500776
+depth = 0.178397
+material = SubResource( 1 )
+
+[node name="CSGBox5" type="CSGBox" parent="Broken/CSGBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, -0.158191, -2 )
+width = 0.187579
+height = 0.500776
+depth = 0.178397
+material = SubResource( 1 )
+
+[node name="Matress" type="Spatial" parent="Broken"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.20827, -0.499394, 0 )
+
+[node name="CSGBox6" type="CSGBox" parent="Broken/Matress"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.585, -0.175227 )
+height = 0.2
+depth = 4.11122
+
+[node name="Pillow" type="Spatial" parent="Broken/Matress"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.754437, 1.34448 )
+
+[node name="CSGCylinder" type="CSGCylinder" parent="Broken/Matress/Pillow"]
+transform = Transform( 1.89962, 0, 0, 0, -0.00344295, -0.273842, 0, 1.60451, -0.0201731, 0, 0, 0 )
+radius = 0.21491
+height = 0.18831
+material = SubResource( 2 )
+
+[node name="CSGTorus" type="CSGTorus" parent="Broken/Matress/Pillow"]
+transform = Transform( 1, 0, 0, 0, -0.00162861, -0.129535, 0, 2.26883, -0.0285255, 0, 0, 0 )
+inner_radius = 0.555
+outer_radius = 0.344
+sides = 12
+ring_sides = 10
+material = SubResource( 2 )
+
+[node name="CSGBox8" type="CSGBox" parent="Broken/Matress"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.623056, -0.641153 )
+width = 2.01602
+height = 0.279286
+depth = 3.21081
+material = SubResource( 3 )
+
+[node name="Requirements" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.5, 0, -1.94707e-07, 0, 0.5, 0, 1.94707e-07, 0, -0.5, 2.42125, 2.26623, 0 )
+list = PoolStringArray( "hammer", "nails" )
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000144243, 0.832527, 0 )
+shape = SubResource( 4 )
+
+[node name="Area" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.702068, 0, 0 )
+shape = SubResource( 5 )
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+[connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]

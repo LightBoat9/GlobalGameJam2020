@@ -1,0 +1,80 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Props/House/Door/Door.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Props/GrassAreas/HouseGrass.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Props/Bed/Bed.tscn" type="PackedScene" id=4]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 35, 1, 35 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.290196, 0.258824, 0.227451, 1 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 42.243, 27.4998, 0.463097 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0.054902, 0.0509804, 0.0509804, 1 )
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 0.145098, 0.129412, 0.129412, 1 )
+
+[node name="HouseInside" type="Spatial"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 30 )
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1067, 23.3318, 17.4726 )
+omni_range = 1391.6
+
+[node name="Floor" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="CSGBox" parent="Floor"]
+width = 70.0
+depth = 70.0
+material = SubResource( 2 )
+
+[node name="Door" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, 4.7, 35 )
+opacity = 0.5
+next_scene = "res://Scenes/HouseOutside.tscn"
+player_pos = Vector3( 0, 2, -4 )
+
+[node name="InvisWall" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="InvisWall"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 34.3257 )
+shape = SubResource( 3 )
+
+[node name="GrassMesh" parent="." instance=ExtResource( 3 )]
+
+[node name="Bed" parent="." instance=ExtResource( 4 )]
+transform = Transform( -2, 0, -6.51683e-07, 0, 2, 0, 6.51683e-07, 0, -2, 17.73, 1.15141, 6.65017 )
+
+[node name="CSGBox" type="CSGBox" parent="."]
+width = 70.0
+height = 39.9903
+material = SubResource( 4 )
+
+[node name="CSGBox2" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 0, 0 )
+height = 40.0
+depth = 70.2701
+material = SubResource( 4 )
+
+[node name="CSGBox3" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 0, 0 )
+height = 40.0
+depth = 70.2701
+material = SubResource( 4 )
+
+[node name="Rug" type="CSGCylinder" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.7745, 0.601941, 17.4235 )
+radius = 12.984
+sides = 64
+material = SubResource( 5 )

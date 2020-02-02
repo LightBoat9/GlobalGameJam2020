@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Props/Pointer/Pointer.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Props/House/Door.gd" type="Script" id=2]
+[ext_resource path="res://Props/House/Door/door.png" type="Texture" id=4]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1.76912, 3.13278, 3.71468 )
+
+[node name="Door" type="Sprite3D"]
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1, -0.0186059, -3.88804, 7.10378 )
+texture = ExtResource( 4 )
+script = ExtResource( 2 )
+
+[node name="Area" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+shape = SubResource( 1 )
+
+[node name="Pointer" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 2.62201, 1.01026 )
+visible = false
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+[connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]

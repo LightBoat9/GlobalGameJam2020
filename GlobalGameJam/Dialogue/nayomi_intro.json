@@ -1,0 +1,56 @@
+{
+    "content": [
+      { 
+        "speaker": "nayomi", 
+        "text": "...Hi."
+      },
+      { 
+        "speaker": "gump", 
+        "text": "Uh...Hi, I'm moving into this house."
+      },
+      { 
+        "speaker": "nayomi", 
+        "text": "This house? Wow, nobody has taken care of this house for like 10 years, it's a mess."
+      },
+      { 
+        "speaker": "gump", 
+        "text": "It's what I could afford..."
+      },
+      { 
+        "speaker": "nayomi", 
+        "text": "Well you have a lot of work ahead of you!"
+      },
+      { 
+        "speaker": "nayomi", 
+        "text": "I hope you brought some tools because last time I checked everything was broken."
+      },
+      { 
+        "speaker": "gump", 
+        "text": "..."
+      },
+      { 
+        "speaker": "nayomi", 
+        "text": "...You don't have any tools do you..."
+      },
+      { 
+        "speaker": "gump", 
+        "text": "No..."
+      },
+      { 
+        "speaker": "nayomi", 
+        "text": "Well come visit later and you can borrow my drill. You will need one if you are going to fix this mailbox."
+      },
+      { 
+        "speaker": "nayomi", 
+        "text": "I live in the house to the left of yours."
+      },
+      { 
+        "speaker": "nayomi", 
+        "text": "But first I think that you should see inside. You probably don't realize the work ahead of you..."
+      },
+      { 
+        "speaker": "nayomi", 
+        "text": "See ya around."
+      }
+    ]
+  }
